@@ -21,20 +21,21 @@ def home():
 
 
 @app.route('/search/username', methods=["POST"])
-def searchUsername():
+def search_username():
     content = request.get_json()
     username = content['username']
-    interfaceType = 'web'
-    results = loop.run_until_complete(find_username(username, interfaceType))
+    interface_type = 'web'
+    results = loop.run_until_complete(find_username(username, interface_type))
     return jsonify(results)
 
 
 @app.route('/image', methods=["GET"])
-def getImage():
+def get_image():
     url = request.args.get('url')
+    # noinspection PyBroadException
     try:
-        imageBinary = requests.get(url).content
-        return Response(imageBinary, mimetype='image/gif')
+        image_binary = requests.get(url).content
+        return Response(image_binary, mimetype='image/gif')
     except:
         return Response(status=500)
 
