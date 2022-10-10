@@ -44,7 +44,7 @@ async def find_username(username, interface_type):
             user_json["sites"].append(x)
         path_save = os.path.join(path, 'results', username + '.json')
         user_file = open(path_save, 'w')
-        json.dump(user_json, user_file, indent=4, sort_keys=True)
+        json.dump(user_json, user_file, indent=2, sort_keys=True)
 
         print(f"{Fore.LIGHTYELLOW_EX}[!] Search complete in {execution_time} seconds\033[0m")
         print(f"{Fore.LIGHTYELLOW_EX}[!] Results saved to {username}.json\033[0m")
