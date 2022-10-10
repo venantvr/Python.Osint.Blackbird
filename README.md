@@ -1,14 +1,14 @@
-<img alt="blackbird-logo" align="left" width="300" height="300" src="https://raw.githubusercontent.com/p1ngul1n0/badges/main/badges/20.png">
-<h1>Blackbird</h1>
+# Blackbird
 
 ### An OSINT tool to search fast for accounts by username across 574 sites.
 > The Lockheed SR-71 "Blackbird" is a long-range, high-altitude, Mach 3+ strategic reconnaissance aircraft developed and manufactured by the American aerospace company Lockheed Corporation.
 
-</br></br></br>
+<img alt="blackbird-logo" align="center" src="https://raw.githubusercontent.com/p1ngul1n0/badges/main/badges/20.png">
+
+</br></br>
 
 <img alt="blackbird-cli" align="center" src="https://raw.githubusercontent.com/p1ngul1n0/src/master/blackbird_printscreen.png">
 <img alt="blackbird-web" align="center" src="https://raw.githubusercontent.com/p1ngul1n0/src/master/blackbird_web.png">
-
 
 ## Disclaimer
 ```
@@ -21,9 +21,6 @@ that any damage (dataloss, system crash, system compromise, etc.) caused by the 
 programs is not P1ngul1n0's responsibility.
 ```
 
-
-
-
 ## Setup
 
 #### Clone the repository
@@ -34,37 +31,37 @@ cd blackbird
 
 #### Install requirements
 ```shell
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 ## Usage
 
 #### Search by username
-```python
-python blackbird.py -u username
+```shell
+$ python blackbird.py -u username
 ```
 #### Run WebServer
-```python
-python blackbird.py --web
+```shell
+$ python blackbird.py --web
 ```
 Access [http://127.0.0.1:9797](http://127.0.0.1:9797/) on the browser
 
 #### Read results file
-```python
-python blackbird.py -f username.json
+```shell
+$ python blackbird.py -f username.json
 ```
 #### List supported sites
-```python
-python blackbird.py --list-sites
+```shell
+$ python blackbird.py --list-sites
 ```
 #### Use proxy
-```python
-python blackbird.py -u crash --proxy http://127.0.0.1:8080
+```shell
+$ python blackbird.py -u crash --proxy http://127.0.0.1:8080
 ```
 #### Show all results
 By default only found accounts will be shown, however you can use the argument below to see all of them.
-```python
-python blackbird.py -u crash --show-all
+```shell
+$ python blackbird.py -u crash --show-all
 ```
 
 ## Docker
@@ -662,7 +659,7 @@ docker run -p 9797:9797 p1ngul1n0/blackbird:v2 "--web"
 
 ## Export Report
 The results can be exported as a PDF Report.
-<p float="left" align="center">
+<p align="center">
   <img alt="blackbird-pdf-cover" width="300" src="https://raw.githubusercontent.com/p1ngul1n0/src/master/blackbird_report_pdf_cover.png">
   <img alt="blackbird-pdf-cover" width="300" src="https://raw.githubusercontent.com/p1ngul1n0/src/master/blackbird_report_pdf_results.png">
 </p>
@@ -684,7 +681,6 @@ Blackbird sends async HTTP requests, allowing a lot more speed when discovering 
 Blackbird uses JSON as a template to store and read data.
 
 The <a href="https://github.com/p1ngul1n0/blackbird/blob/main/data.json">data.json</a> file store all sites that blackbird verify.
-
 
 #### Params
 - app - Site name
@@ -796,7 +792,6 @@ I'm grateful to all contributors who improved and bugfixed the project.
 - [ ] Add unit test (Change ID to Appname, add "invalid-user" and "valid-user" params in JSON.)
 - [ ] Export results in CSV
 - [ ] Deploy on Cloud
-
 
 ## Contact
 Feel free to contact me on <a href="https://twitter.com/p1ngul1n0">Twitter</a>
